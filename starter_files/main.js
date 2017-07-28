@@ -11,8 +11,8 @@ function question1 () {
   for (var i = 0; i < data.length; i++) {
       sum += data[i].price;
        }
-
-       console.log('The average price is ' + '$' + (sum/data.length));
+      let avg = sum/data.length
+       console.log('The average price is ' + '$' + avg.toFixed(2));
 }
 
 
@@ -96,5 +96,18 @@ function question5 () {
 // 6: How many items were made by their sellers?
 // Answer:
 function question6 () {
-  // Answer:
+  let maker = 0;
+  for (var i = 0; i < data.length; i++) {
+    if (data[i].who_made === "i_did"){
+        maker = maker + 1;
+    }
+
+
+
 }
+
+  console.log(maker+ ' ' + 'items were made by their sellers.');
+}
+
+
+  // Answer:
